@@ -7,8 +7,9 @@ public class Mano : MonoBehaviour
     
     public List<GameObject> cartasEnMano = new List<GameObject>(); // Array de las cartas en la mano
     public GameObject carta ; // Prefab de Carta
-    public float movementSpeed = 3f; // Velocidad de movimiento de las cartas
+    public float movementSpeed = 1.5f; // Velocidad de movimiento de las cartas
     int maxNumCartas = 4; // Número máximo de cartas en mano
+    private GameObject mochila;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +60,7 @@ public class Mano : MonoBehaviour
 
     // Usa una carta de la mano
     public void UsarCarta(int numCarta){
-        // PROVOCAR EL EFECTO DE LA CARTA!!
+        // Provocar el efecto de la carta
         cartasEnMano[numCarta].GetComponent<Carta>().LlamarEfecto();
         // Destruir la instancia de la carta
         Destroy(cartasEnMano[numCarta]);

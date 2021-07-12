@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mano
   - Mochila
+  - Fondo
   layers:
   - Default
   - TransparentFX
