@@ -9,7 +9,7 @@ public class Selector : MonoBehaviour
     public int personajeActual; // Contador del personaje actual en el selector
     public Text nombre; // Nombre del personaje actual
     public Text info; // Descripción del personaje actual
-    public Sprite miRenderer; // Sprite del personaje actual
+    public Image img; // Sprite del personaje actual
     public Character[] personaje; // Array de personajes (almacena datos para cargarlos)
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class Selector : MonoBehaviour
     {
         nombre.text = personaje[personajeActual].nombre;
         info.text = personaje[personajeActual].info;
-        miRenderer = personaje[personajeActual].img;
+        img.sprite = personaje[personajeActual].img;
     }
 
     public void cambioPersonaje(bool dcha)
