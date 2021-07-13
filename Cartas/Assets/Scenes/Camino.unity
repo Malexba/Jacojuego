@@ -895,5 +895,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fondo
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5589495566894620772, guid: ae662f3f6b73e48479aa1ba0ca510be3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ae662f3f6b73e48479aa1ba0ca510be3, type: 3}

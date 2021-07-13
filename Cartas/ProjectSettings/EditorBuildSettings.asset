@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: 
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Inicio.unity
@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Selector.unity
     guid: a193fb8f92828204a9af7f1a2a6e99b2
+  - enabled: 1
+    path: Assets/Scenes/Albergue.unity
+    guid: 689dee6063bafaf4b9c90a1445b67b38
+  - enabled: 1
+    path: Assets/Scenes/Camino.unity
+    guid: cd4f27ad4b2454c4ab747074344fdd0b
   m_configObjects: {}

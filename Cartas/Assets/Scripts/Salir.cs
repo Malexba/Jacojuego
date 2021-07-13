@@ -7,7 +7,7 @@ public class Salir : MonoBehaviour
 {
     public void CambioEscena()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Selector");
     }
 
     public void Salgo()
