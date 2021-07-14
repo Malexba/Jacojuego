@@ -46,7 +46,9 @@ public class Carta : EventTrigger
 
     // Se activa cuando se pulsa sobre la carta
     public override void OnPointerDown(PointerEventData eventData){
-        dragging = true;
+        if (mano.GetComponent<Mano>().GetArrastrables()){
+            dragging = true;
+        }
     }
 
     // Se activa cuando se deja de pulsat sobre la carta

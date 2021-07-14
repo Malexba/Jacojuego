@@ -12,11 +12,14 @@ public class Mano : MonoBehaviour
     private GameObject mochila; // GameObject de la mochila de la UI
     private bool[] creating; // Booleanos que indican si se está creando una carta
     private float[] timeCreating; // Timestamps desde que se inicio la creación de una carta
+    private bool arrastrables; // Indica si se puede arrastrar cartas
+
     // Start is called before the first frame update
     void Start()
     {
         creating = new bool[maxNumCartas];
         timeCreating = new float[maxNumCartas];
+        arrastrables = true;
     }
 
     // Update is called once per frame
@@ -100,5 +103,9 @@ public class Mano : MonoBehaviour
                 cartasEnMano[i].GetComponent<Carta>().posicionEnMano = i;
             }
         }
+    }
+
+    public bool GetArrastrables(){
+        return arrastrables;
     }
 }

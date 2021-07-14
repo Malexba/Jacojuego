@@ -8,6 +8,7 @@ TagManager:
   - Mochila
   - Fondo
   - Mazo
+  - Casilla
   layers:
   - Default
   - TransparentFX

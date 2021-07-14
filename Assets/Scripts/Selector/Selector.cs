@@ -49,7 +49,6 @@ public class Selector : MonoBehaviour
     public void meLoQuedo()
     {
         jugador.personaje = personajeActual;
-        jugador.inicio = true;
         SceneManager.LoadScene("Intermedio");
     }
 }
