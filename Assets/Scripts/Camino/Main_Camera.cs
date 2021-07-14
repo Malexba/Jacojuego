@@ -31,7 +31,7 @@ private Vector3 originalPosition; // Posición original de la cámara al empexza
 
     // Update is called once per frame
     void Update()
-    {print(Quaternion.Euler(Vector3.forward * 60));
+    {
         // Posición X suavizada de la cámara hacia el target
         float posX = Mathf.Round(
             Mathf.SmoothDamp(transform.position.x,
