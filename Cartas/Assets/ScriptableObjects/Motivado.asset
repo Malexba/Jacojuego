@@ -12,9 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
   m_Name: Motivado
   m_EditorClassIdentifier: 
-  nombre: Motivado
-  energia: 7
-  motivacion: 10
-  tamInv: 4
-  img: {fileID: 0}
-  info: "Peregrino con gran motivaci\xF3n pero menor vitalidad"
