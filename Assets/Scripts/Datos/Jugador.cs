@@ -12,4 +12,10 @@ public class Jugador : ScriptableObject
     {
         mazo.Add(i);
     }
+
+    public Sprite spriteCarta(int i)
+    {
+        Sprite sprite = null;// Asigna sprite en función de id de la carta; i es índice en lista de mazo
+        return sprite;
+    }
 }
