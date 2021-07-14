@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
+  m_Name: NPC
+  m_EditorClassIdentifier: 
+  nombre: Abad
+  tipo: 3
+  energia: 10
+  motivacion: 7
+  tamInv: 4
+  img: {fileID: 0}
+  info: "Un simp\xE1tico abad"
+  dialogo: "\xA1Bienvenido, viajero! Disfruta de nuestra maravillosa ciudad sin prisas"
