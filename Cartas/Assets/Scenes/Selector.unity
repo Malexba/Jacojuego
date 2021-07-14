@@ -994,17 +994,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1770592020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2564c4df2a513884c9e71a165220cd26, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  personajeActual: 0
-  nombre: {fileID: 1728922771}
-  info: {fileID: 586729804}
-  img: {fileID: 1943826492}
-  personaje:
-  - {fileID: 11400000, guid: 374cf209fcf03cd4e86c22715588b92f, type: 2}
-  - {fileID: 11400000, guid: 66a3fcad4bc585644abf2b8dccb6f1e8, type: 2}
-  - {fileID: 11400000, guid: 036bc982f34a4064fbc58bc7761b75e4, type: 2}
 --- !u!1 &1943826491
 GameObject:
   m_ObjectHideFlags: 0

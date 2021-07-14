@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Carta : EventTrigger
 {
-    private bool dragging; // Booleano que dice si se está arrastrando la carta
+    public bool dragging; // Booleano que dice si se está arrastrando la carta
     
     private float altura; // Altura de la carta
 

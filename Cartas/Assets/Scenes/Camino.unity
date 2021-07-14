@@ -216,7 +216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 123029617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f6962e96b72aea408cac040d9d1b0f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c9490ae9aaf15140a3fdc169af42992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1444498157}
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 778401123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31591e6781045e04aa8c77ca5944d163, type: 3}
+  m_Script: {fileID: 11500000, guid: e325f0c00d14fb94297d94aa0e56b771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cartasEnMano: []

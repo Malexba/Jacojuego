@@ -9,14 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
+  m_Script: {fileID: 0}
   m_Name: Experto
   m_EditorClassIdentifier: 
-  nombre: Experto
-  energia: 8
-  motivacion: 6
-  tamInv: 5
-  img: {fileID: 0}
-  info: "Avezado peregrino que no es la primera vez que realiza la ruta jacobea.
-    Puede que no tenga la motivaci\xF3n o vitalidad de peregrinos m\xE1s j\xF3venes,
-    pero su experiencia resulta muy valiosa."
