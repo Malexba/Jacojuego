@@ -20,11 +20,10 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
     public Jugador jugador;
     bool mochi;
     private int posLista = 0; // Posición en la lista del mazo (mod 3)
-    public bool inicio; // Indica si es el fin o el inicio de la etapa
 
     void Start()
     {
-        if (inicio)
+        if (jugador.inicio)
         {
             astro.sprite = astros[0];
         } else
@@ -120,8 +119,9 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
     }
     public void avanzar()
     {
-        if (inicio)
+        if (jugador.inicio)
         {
+            jugador.inicio = false;
             SceneManager.LoadScene("Camino");
         }
     }
