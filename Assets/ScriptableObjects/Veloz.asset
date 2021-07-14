@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
+  m_Name: Veloz
+  m_EditorClassIdentifier: 
+  nombre: Veloz
+  tipo: 2
+  energia: 13
+  motivacion: 5
+  tamInv: 4
+  img: {fileID: 0}
+  info: "\xC1gil peregrino que busca realizar el camino m\xE1s por una motivaci\xF3n
+    f\xEDsica que m\xEDstica."
+  dialogo: Hola, soy tu amigo el veloz
