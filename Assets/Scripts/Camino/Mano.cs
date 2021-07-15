@@ -13,6 +13,7 @@ public class Mano : MonoBehaviour
     private bool[] creating; // Booleanos que indican si se está creando una carta
     private float[] timeCreating; // Timestamps desde que se inicio la creación de una carta
     private bool arrastrables; // Indica si se puede arrastrar cartas
+    private bool principioDeTurno; // Indica si es el principio de turno
 
     // Start is called before the first frame update
     void Start()
@@ -20,18 +21,20 @@ public class Mano : MonoBehaviour
         creating = new bool[maxNumCartas];
         timeCreating = new float[maxNumCartas];
         arrastrables = true;
+        principioDeTurno = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Actualiza la posicon de las cartas de la mano
-        if (cartasEnMano.Count < maxNumCartas)
+        if (principioDeTurno && cartasEnMano.Count < maxNumCartas)
         {
             RobarCarta();
         }
         else
         {
+            principioDeTurno = false;
             ReorganizarMano();
         }
 
@@ -107,5 +110,9 @@ public class Mano : MonoBehaviour
 
     public bool GetArrastrables(){
         return arrastrables;
+    }
+
+    public void TerminarTurno(){
+        principioDeTurno = true;
     }
 }
