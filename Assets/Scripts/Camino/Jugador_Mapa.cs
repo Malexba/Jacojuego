@@ -21,6 +21,7 @@ public class Jugador_Mapa : MonoBehaviour
     private float alturaMaxEnergia;
     private float alturaMaxMotivacion;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,7 +82,6 @@ public class Jugador_Mapa : MonoBehaviour
             energia = energia + i;
         }
     }
-
     public void SumarMotivacion(int i){
         if (motivacion + i > motivacionMaxima){
             motivacion = motivacionMaxima;
@@ -89,6 +89,8 @@ public class Jugador_Mapa : MonoBehaviour
             motivacion = motivacion + i;
         }
     }
+
+    
 
     public int GetEnergia(){
         return energia;
