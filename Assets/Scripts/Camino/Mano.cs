@@ -8,6 +8,7 @@ public class Mano : MonoBehaviour
 {
 
     public List<GameObject> cartasEnMano = new List<GameObject>(); // Array de las cartas en la mano
+    private List<int> tipoCartasMano = new List<int>(); // Tipos de las cartas de la mano
     public List<int> mazo = new List<int>(); // Mazo en la mochila
     public Jugador propiedadesJugador; // Propiedades del ScriptableObject Jugador
     public GameObject[] cartas; // Prefabs de Carta Camino Llano, Carta Compañía Agradable, Carta Motivación Extra, Carta Almuerzo en Grupo, Carta Oración a la Catedral de Burgos
@@ -32,7 +33,9 @@ public class Mano : MonoBehaviour
         arrastrables = true;
         principioDeTurno = true;
         transform.GetChild(1).gameObject.SetActive(false);
-        mazo = propiedadesJugador.mazo;
+        foreach(int num in propiedadesJugador.mazo){
+            mazo.Add(num);
+        }
     }
 
     // Update is called once per frame
@@ -45,6 +48,8 @@ public class Mano : MonoBehaviour
             for (int i =aux-1; i>=0;i--){
                 Destroy(cartasEnMano[i]);
                 cartasEnMano.RemoveAt(i);
+                mazo.Add(tipoCartasMano[i]); // Poner la carta de vuelta en el mazo
+                tipoCartasMano.RemoveAt(i);
             }
             transform.GetChild(1).gameObject.SetActive(true);
             for (int i =0; i<maxNumCartas;i++){
@@ -82,10 +87,13 @@ public class Mano : MonoBehaviour
     // Roba una carta del mazo
     void RobarCarta()
     {
+        print(mazo[1]);
         creating[cartasEnMano.Count] = true;
         timeCreating[cartasEnMano.Count] = Time.realtimeSinceStartup;
         int index = (int)Math.Floor(mazo.Count*UnityEngine.Random.value);
+        tipoCartasMano.Add(mazo[index]); // Añadir el tipo de la carta
         GameObject nuevaCarta = Instantiate(cartas[mazo[index]], new Vector3(-350, 54, 0), transform.rotation);
+        mazo.RemoveAt(index); // Quitar carta del mazo porque está en la mano
         nuevaCarta.transform.SetParent(transform, false);
         nuevaCarta.name = "Carta_" + cartasEnMano.Count.ToString();
         nuevaCarta.GetComponent<Carta>().posicionEnMano = cartasEnMano.Count;
@@ -125,6 +133,8 @@ public class Mano : MonoBehaviour
             // Destruir la instancia de la carta
             Destroy(cartasEnMano[numCarta]);
             cartasEnMano.RemoveAt(numCarta);
+            mazo.Add(tipoCartasMano[numCarta]); // Poner la carta de vuelta en el mazo
+            tipoCartasMano.RemoveAt(numCarta);
 
             // Reorganizar la mano
             for (int i = numCarta; i < cartasEnMano.Count; i++)
