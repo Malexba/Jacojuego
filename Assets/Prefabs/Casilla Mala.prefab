@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1796985061882346054}
   - component: {fileID: -404332461205227046}
   - component: {fileID: 6651585435156501765}
+  - component: {fileID: 4867712554602390850}
   m_Layer: 0
   m_Name: Casilla Mala
   m_TagString: Casilla
@@ -117,6 +118,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &4867712554602390850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543427366207257626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd49177f4d09784ca9050922892aa3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6948691299063557007
 GameObject:
   m_ObjectHideFlags: 0

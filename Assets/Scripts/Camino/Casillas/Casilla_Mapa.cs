@@ -52,4 +52,8 @@ public class Casilla_Mapa : MonoBehaviour
     public void DesactivarHalo(){
         transform.GetChild(1).gameObject.SetActive(false);
     }
+
+    public void Efecto(){
+        BroadcastMessage("ProvocarEfecto");
+    }
 }
