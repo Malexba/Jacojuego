@@ -18,6 +18,8 @@ public class Mano : MonoBehaviour
 
     private float timePrincipioDeTurno; // Timestamp desde principio de turno
 
+    public GameObject jugador; // Jugador
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,7 @@ public class Mano : MonoBehaviour
         if (principioDeTurno)
         {   
             int aux = cartasEnMano.Count;
-            for (int i =0; i<aux;i++){
+            for (int i =aux-1; i>=0;i--){
                 Destroy(cartasEnMano[i]);
                 cartasEnMano.RemoveAt(i);
             }
@@ -53,8 +55,10 @@ public class Mano : MonoBehaviour
         }
 
         // Si ha pasado un segundo desde la creación de la carta, creating[i]=false
-        for (int i = 0; i < cartasEnMano.Count; i++)
+        int auxs = cartasEnMano.Count;
+        for (int i = 0; i < auxs; i++)
         {
+            
             if (cartasEnMano[i].GetComponent<Carta>().creating == true && Time.realtimeSinceStartup - timeCreating[i] > 3f)
             {
                 cartasEnMano[i].GetComponent<Carta>().creating = false;
@@ -66,7 +70,7 @@ public class Mano : MonoBehaviour
         }
     }
 
-    List<GameObject> GetCartas()
+    public List<GameObject> GetCartas()
     {
         return cartasEnMano;
     }
@@ -133,6 +137,7 @@ public class Mano : MonoBehaviour
     public void TerminarTurno(){
         principioDeTurno = true;
         timePrincipioDeTurno = Time.realtimeSinceStartup;
+        jugador.GetComponent<Jugador_Mapa>().RestarMotivacion(1);
     }
 
     // True si el raton esta sobre la mano
