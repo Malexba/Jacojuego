@@ -13,7 +13,7 @@ public class Mano : MonoBehaviour
     public Jugador propiedadesJugador; // Propiedades del ScriptableObject Jugador
     public GameObject[] cartas; // Prefabs de Carta Camino Llano, Carta Compañía Agradable, Carta Motivación Extra, Carta Almuerzo en Grupo, Carta Oración a la Catedral de Burgos
     public float movementSpeed = 1.5f; // Velocidad de movimiento de las cartas
-    int maxNumCartas = 4; // Número máximo de cartas en mano
+    public int maxNumCartas = 4; // Número máximo de cartas en mano
     private GameObject mochila; // GameObject de la mochila de la UI
     private bool[] creating; // Booleanos que indican si se está creando una carta
     private float[] timeCreating; // Timestamps desde que se inicio la creación de una carta
@@ -87,7 +87,6 @@ public class Mano : MonoBehaviour
     // Roba una carta del mazo
     void RobarCarta()
     {
-        print(mazo[1]);
         creating[cartasEnMano.Count] = true;
         timeCreating[cartasEnMano.Count] = Time.realtimeSinceStartup;
         int index = (int)Math.Floor(mazo.Count*UnityEngine.Random.value);
@@ -112,7 +111,7 @@ public class Mano : MonoBehaviour
         float anchura = (float)1.5 * (numeroDeCartas - 1) * width;
         for (int i = 0; i < numeroDeCartas; i++)
         {
-            Vector3 endPosition = new Vector3((float)1.5 * width * i - anchura / 2 + 100, 1, 0);
+            Vector3 endPosition = new Vector3((float)1.1*width * i - anchura / 2 + 200, 1, 0);
             Vector3 currentPosition = cartasEnMano[i].transform.localPosition;
 
             if (cartasEnMano[i].transform.localPosition != endPosition)
