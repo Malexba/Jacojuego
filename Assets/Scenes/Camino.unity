@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9490ae9aaf15140a3fdc169af42992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4773528655029856929}
+  target: {fileID: 455394466}
   smoothTime: 0.3
   dragSpeed: 20
 --- !u!1 &129649518 stripped
@@ -994,6 +994,10 @@ PrefabInstance:
     - target: {fileID: 8475229659667526208, guid: b430956adbb4d87439e211d02aae5693, type: 3}
       propertyPath: m_Name
       value: Casila Buena
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475229659667526208, guid: b430956adbb4d87439e211d02aae5693, type: 3}
+      propertyPath: m_TagString
+      value: Casilla
       objectReference: {fileID: 0}
     - target: {fileID: 8585764123118606399, guid: b430956adbb4d87439e211d02aae5693, type: 3}
       propertyPath: casillasSiguientes.Array.size
@@ -4997,11 +5001,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5589495566894620772, guid: ae662f3f6b73e48479aa1ba0ca510be3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ae662f3f6b73e48479aa1ba0ca510be3, type: 3}
---- !u!4 &4773528655029856929 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4005647801112183695, guid: 9e30edf34f9e1e040b97532273a4f769, type: 3}
-  m_PrefabInstance: {fileID: 8478044399810259246}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4836103782296927579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1475995279573424957, guid: 83e2fff51ae243341b3f79dbd7cd38c8, type: 3}
