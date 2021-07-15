@@ -54,10 +54,13 @@ private Vector3 originalPosition; // Posición original de la cámara al empexza
         }
 
         // Comprobar si estamos arrastrando alguna carta
-        int numCartas = GameObject.FindGameObjectWithTag("Mano").GetComponent<Mano>().cartasEnMano.Count;
+        List<GameObject> cartasEnMano = GameObject.FindGameObjectWithTag("Mano").GetComponent<Mano>().GetCartas();
+        int numCartas = cartasEnMano.Count;
         cartaEnArrastre = false;
         for (int i = 0; i < numCartas; i++ ){
-            cartaEnArrastre = cartaEnArrastre | GameObject.Find("Carta_" + i.ToString()).GetComponent<Carta>().dragging;
+            
+            cartaEnArrastre = cartaEnArrastre | cartasEnMano[i].GetComponent<Carta>().dragging;
+            
         }
 
         // Al iniciar el arrastre

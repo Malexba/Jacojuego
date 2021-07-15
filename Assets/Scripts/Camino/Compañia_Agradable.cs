@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camino_Llano : MonoBehaviour
+public class Compañia_Agradable : MonoBehaviour
 {
-  
-
-    // Moverse de 1 a 5 casillas
+    // Moverse de 2 a 3 casillas
     public void ProvocarEfecto(){
         GameObject jugador = GameObject.FindGameObjectWithTag("Player");
-        jugador.GetComponent<Jugador_Mapa>().RestarEnergia(6); // Restar 6 puntos de energía
+        jugador.GetComponent<Jugador_Mapa>().RestarEnergia(3); // Restar 3 puntos de energía
         GameObject casillaActual = jugador.GetComponent<Jugador_Mapa>().casillaActual;
         List<GameObject> casillasPosibles = new List<GameObject>();
         List<GameObject> auxs = new List<GameObject>();
-        // Encuentra las casillas a distancia de entre 1 y 5
-        for(int i =1;i < 6; i++){
+        // Encuentra las casillas a distancia de entre 2 y 3
+        for(int i =2;i < 3; i++){
             auxs = casillaActual.GetComponent<Casilla_Mapa>().GetCasillasADistancia(i);
             foreach(GameObject aux in auxs){
                 casillasPosibles.Add(aux);
