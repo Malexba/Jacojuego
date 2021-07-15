@@ -12,13 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
   m_Name: Experto
   m_EditorClassIdentifier: 
-  nombre: Experto
+  nombre: Aymeric Picaud
+  nombre2: Aymeric Picaud
   tipo: 0
-  energia: 8
-  motivacion: 6
+  energia: 27
+  motivacion: 9
   tamInv: 5
   img: {fileID: 0}
-  info: "Avezado peregrino que no es la primera vez que realiza la ruta jacobea.
-    Puede que no tenga la motivaci\xF3n o vitalidad de peregrinos m\xE1s j\xF3venes,
-    pero su experiencia resulta muy valiosa."
-  dialogo: Hola, soy tu amigo el experto
+  img2: {fileID: 0}
+  info: "Cl\xE9rigo y peregrino franc\xE9s del siglo XII, al cual se le atribuye
+    la primera gu\xEDa para los peregrinos, recogida en el C\xF3dice Calixtino. Su
+    experiencia resulta muy valiosa."
+  dialogo: "Desde N\xE1jera aqu\xED la verdad es que hay un buen trecho, si no se
+    hace a caballo esta etapa puede resultar demasiado ardua... \xA1Anda, pero si
+    est\xE1s ah\xED! Perdona, no te hab\xEDa visto, estaba redactando un manuscrito
+    con indicaciones sobre la ruta. A veces me quedo tan ensimismado leyendo que
+    olvido el mundo que me rodea."
+  dialogo2: "\xBFQuieres ver un boceto del monasterio que hemos visto al pasar? Si
+    te soy sincero, me he entretenido tanto admir\xE1ndolo que se me ha hecho demasiado
+    tarde y voy a tener que pasar la noche aqu\xED. Normalmente cuando realizo esta
+    etapa suelo llegar hasta Fr\xF3mista, pero creo firmemente que el hecho de disfrutar
+    de la experiencia es lo m\xE1s importante."

@@ -12,11 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
   m_Name: Lugar
   m_EditorClassIdentifier: 
-  nombre: Catedral
+  nombre: Catedral de Burgos
+  nombre2: "Convento de San Ant\xF3n"
   tipo: 4
   energia: 10
   motivacion: 7
   tamInv: 4
   img: {fileID: 0}
-  info: Info personaje
-  dialogo: "Aqu\xED te hablo de la historia de la catedral"
+  img2: {fileID: 0}
+  info: "Ubicaci\xF3n relevante"
+  dialogo: "Burgos fue convertida en sede episcopal en 1075 por el rey Alfonso VI
+    y la autoridad del papa Gregorio VII. El monarca promovi\xF3 la construcci\xF3n
+    de una catedral -seguramente de estilo rom\xE1nico- dedicada a la Virgen Mar\xEDa,
+    y aunque se termin\xF3 de construir en 1096 pront\xF3 acabar\xEDa resultando
+    peque\xF1a para las necesidades de la ciudad. Por ello, en 1221 comenz\xF3 su
+    remodelaci\xF3n g\xF3tica, la cual perdura a d\xEDa de hoy junto a sus reformas
+    y restauraciones."
+  dialogo2: "Fundado en 1146 por Alfonso VII, este monasterio se cre\xF3 sobre lo
+    que fue anteriormente el palacio y la huerta del rey Pedro I de Castilla. En
+    su \xE9poca fue un hospital donde se trataba a los enfermos que ven\xEDan del
+    Camino de Santiago. Especialmente famosas eran las ceremonias que hac\xEDan los
+    monjes antonianos para bendecir diversos objetos, a las que acud\xEDan muchos
+    fieles. A d\xEDa de hoy solo restan ruinas, las cuales datan del siglo XIV."

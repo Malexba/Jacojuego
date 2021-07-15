@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: NPC
   m_EditorClassIdentifier: 
   nombre: Abad
+  nombre2: Abad
   tipo: 3
   energia: 10
   motivacion: 7
   tamInv: 4
   img: {fileID: 0}
+  img2: {fileID: 0}
   info: "Un simp\xE1tico abad"
-  dialogo: "\xA1Bienvenido, viajero! Disfruta de nuestra maravillosa ciudad sin prisas"
+  dialogo: "Espero que disfrutes de una agradable jornada. En caso de flaqueza recuerda
+    mantener siempre la fe y si lo necesitas puedes orar a la catedral para aumentar
+    tu convicci\xF3n."
+  dialogo2: "\xA1Bienvenido viajero! Aprovecha ahora y descansa. Ma\xF1ana por la
+    ma\xF1ana realizaremos una ceremonia de bendici\xF3n. Espero que te guste el
+    pan de San Antonio que elaboramos aqu\xED, una de sus principales virtudes es
+    que te protege de enfermedades y los peligros."

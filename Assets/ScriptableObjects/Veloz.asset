@@ -12,12 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
   m_Name: Veloz
   m_EditorClassIdentifier: 
-  nombre: Veloz
+  nombre: Gotescalco
+  nombre2: Gotescalco
   tipo: 2
-  energia: 13
-  motivacion: 5
+  energia: 25
+  motivacion: 12
   tamInv: 4
   img: {fileID: 0}
-  info: "\xC1gil peregrino que busca realizar el camino m\xE1s por una motivaci\xF3n
-    f\xEDsica que m\xEDstica."
-  dialogo: Hola, soy tu amigo el veloz
+  img2: {fileID: 0}
+  info: "Obispo de Santa Mar\xEDa de An\xEDs, en Aquitania, Francia. Se dice que
+    fue el primer peregrino no hisp\xE1nico. Su fe le otorga una gran motivaci\xF3n
+    para hacer el Camino."
+  dialogo: "Albelda es un lugar maravilloso, estoy deseando volver el a\xF1o que
+    viene para recoger el Libellus de virginitate. Es un c\xF3dice de San Ildenfonso
+    de Toledo que trata sobre la virgen Mar\xEDa. Si alguna vez pasas por Aquitania
+    no dudes en hacerme una visita y podr\xE1s leerlo, ya sabes que puedes considerar
+    Santa Mar\xEDa de An\xEDs comotu segundo hogar."
+  dialogo2: "\xBFHas disfrutado de la actuaci\xF3n de mis juglares? La verdad es
+    que junto a mi comitiva este viaje est\xE1 siendo una experiencia maravillosa.
+    Los trovadores amenizan las noches y ayudan a olvidar el cansancio del d\xEDa;
+    mientras que me reconforta poder ofrecer protecci\xF3n a otros peregrinos gracias
+    a la ayuda de mis lanceros."
