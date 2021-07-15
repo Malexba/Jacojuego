@@ -9,13 +9,21 @@ public class Casilla_Mapa : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.GetChild(1).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void OnMouseDown(){
+        
+        // Si tiene el halo activo, el jugador se puede mover hacia alli
+        if (transform.GetChild(1).gameObject.activeSelf){
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Jugador_Mapa>().MoverACasilla(transform);
+        }
     }
 
     public List<GameObject> GetCasillasADistancia(int dist) // Devuelve una lista de las casillas a distancia dist
@@ -35,5 +43,13 @@ public class Casilla_Mapa : MonoBehaviour
         }
 
         return casillas;
+    }
+
+    public void ActivarHalo(){
+        transform.GetChild(1).gameObject.SetActive(true);
+    }
+
+    public void DesactivarHalo(){
+        transform.GetChild(1).gameObject.SetActive(false);
     }
 }
