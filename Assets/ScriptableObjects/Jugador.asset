@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: 0
   mazo: 00000000000000000000000000000000
+  inicio: 0

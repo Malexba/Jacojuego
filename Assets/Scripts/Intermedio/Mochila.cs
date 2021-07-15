@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la escena
 {
@@ -11,12 +12,25 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
     public GameObject arriba;
     public GameObject abajo;
     public GameObject[] carta;
+    public Image astro;
+    public Sprite[] astros;
     public Text nombre;
     public Image img;
     public Text texto;
     public Jugador jugador;
     bool mochi;
     private int posLista = 0; // Posición en la lista del mazo (mod 3)
+
+    void Start()
+    {
+        if (jugador.inicio)
+        {
+            astro.sprite = astros[0];
+        } else
+        {
+            astro.sprite = astros[1];
+        }
+    }
 
     public void platicar(Character c)
     {
@@ -25,9 +39,18 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
             popUp.SetActive(true);
             hablar.SetActive(true);
             mochi = false;
-            nombre.text = c.nombre;
-            img.sprite = c.img;
-            texto.text = c.dialogo;
+            if (jugador.inicio)
+            {
+                nombre.text = c.nombre;
+                img.sprite = c.img;
+                texto.text = c.dialogo;
+            }
+            else
+            {
+                nombre.text = c.nombre2;
+                img.sprite = c.img2;
+                texto.text = c.dialogo2;
+            }
         }
     }
 
@@ -102,5 +125,13 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
         else
             hablar.SetActive(false);;
         popUp.SetActive(false);
+    }
+    public void avanzar()
+    {
+        if (jugador.inicio)
+        {
+            jugador.inicio = false;
+            SceneManager.LoadScene("Camino");
+        }
     }
 }

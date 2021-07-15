@@ -12,11 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
   m_Name: Motivado
   m_EditorClassIdentifier: 
-  nombre: Motivado
+  nombre: "Sof\xEDa de Holanda"
+  nombre2: "Sof\xEDa de Holanda"
   tipo: 1
-  energia: 7
+  energia: 35
   motivacion: 10
   tamInv: 4
   img: {fileID: 0}
-  info: "Peregrino con gran motivaci\xF3n pero menor vitalidad"
-  dialogo: Hola, soy tu amigo el motivado
+  img2: {fileID: 0}
+  info: "Condesa holandesa del siglo XII y peregrina, es la primera devota flamenca
+    de la que se tiene noticia. Hac\xEDa descalza media legua cada d\xEDa, por lo
+    que tiene mucho aguante."
+  dialogo: "Goedemorgen, \xBFqu\xE9 tal has pasado la noche? Yo he descansado muy
+    bien. \xBFQue porqu\xE9 voy descalza? Me gusta comenzar y terminar las etapas
+    as\xED para poder sentir de una manera m\xE1s especial la experiencia del viaje,
+    aunque la verdad es que solo acabo recorriendo en total media legua descalza,
+    intentar hacer m\xE1s me resultar\xEDa demasiado extenuante."
+  dialogo2: "Hoy en d\xEDa parece que ning\xFAn camino es seguro ya. \xBFTe puedes
+    creer que me ha intentado asaltar una banda de atracadores? Menos mal que s\xE9
+    defenderme y he podido espantarles, aunque temo por otros peregrinos que realicen
+    esta etapa en el futuro."
