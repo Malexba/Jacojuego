@@ -25,7 +25,7 @@ public class Jugador_Mapa : MonoBehaviour
     void Start()
     {
         GetComponent<SpriteRenderer>().sprite = sprite;
-        MoverACasilla(casillaActual);
+        MoverACasilla(casillaActual.transform);
         energia = energiaMaxima;
         motivacion = motivacionMaxima;
         alturaMaxEnergia = barraEnergia.GetComponent<RectTransform>().rect.width;
@@ -41,8 +41,13 @@ public class Jugador_Mapa : MonoBehaviour
         numMotivacion.text = motivacion.ToString();
     }
 
-    public void MoverACasilla(GameObject casilla){
-        transform.position = casillaActual.transform.position + new Vector3(0,sprite.bounds.size.y/2,0);
+    public void MoverACasilla(Transform casilla){
+        transform.position = casilla.position + new Vector3(0,sprite.bounds.size.y/2,0);
+
+        GameObject[] casillas = GameObject.FindGameObjectsWithTag("Casilla");
+        foreach(GameObject cas in casillas){
+            cas.transform.GetChild(1).gameObject.SetActive(false);
+        }
     }
 
     public void SetEnergiaMaxima(int i){

@@ -22,11 +22,17 @@ public class Camino_Llano : MonoBehaviour
         GameObject casillaActual = jugador.GetComponent<Jugador_Mapa>().casillaActual;
         List<GameObject> casillasPosibles = new List<GameObject>();
         List<GameObject> auxs = new List<GameObject>();
+        // Encuentra las casillas a distancia entre 1 y 5
         for(int i =1;i < 6; i++){
             auxs = casillaActual.GetComponent<Casilla_Mapa>().GetCasillasADistancia(i);
             foreach(GameObject aux in auxs){
                 casillasPosibles.Add(aux);
             }
+        }
+
+        // Activa el halo de todas ellas
+        foreach (GameObject casilla in casillasPosibles){
+            casilla.transform.GetChild(1).gameObject.SetActive(true);
         }
 
     }
