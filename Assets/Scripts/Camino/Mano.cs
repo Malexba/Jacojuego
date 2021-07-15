@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mano : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Mano : MonoBehaviour
     private bool arrastrables; // Indica si se puede arrastrar cartas
     private bool principioDeTurno; // Indica si es el principio de turno
 
+    private float timePrincipioDeTurno; // Timestamp desde principio de turno
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,29 +26,43 @@ public class Mano : MonoBehaviour
         timeCreating = new float[maxNumCartas];
         arrastrables = true;
         principioDeTurno = true;
+        transform.GetChild(1).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Actualiza la posicon de las cartas de la mano
-        if (principioDeTurno && cartasEnMano.Count < maxNumCartas)
-        {
-            RobarCarta();
+        // Actualiza la posicion de las cartas de la mano
+        if (principioDeTurno)
+        {   
+            int aux = cartasEnMano.Count;
+            for (int i =0; i<aux;i++){
+                Destroy(cartasEnMano[i]);
+                cartasEnMano.RemoveAt(i);
+            }
+            transform.GetChild(1).gameObject.SetActive(true);
+            for (int i =0; i<maxNumCartas;i++){
+                RobarCarta();
+            }
+            principioDeTurno = false;
+            
         }
         else
         {
-            principioDeTurno = false;
             ReorganizarMano();
         }
 
         // Si ha pasado un segundo desde la creación de la carta, creating[i]=false
-        for (int i = 0; i < maxNumCartas; i++)
+        for (int i = 0; i < cartasEnMano.Count; i++)
         {
-            if (creating[i] == true && Time.realtimeSinceStartup - timeCreating[i] > 1f)
+            if (cartasEnMano[i].GetComponent<Carta>().creating == true && Time.realtimeSinceStartup - timeCreating[i] > 3f)
             {
-                creating[i] = false;
+                cartasEnMano[i].GetComponent<Carta>().creating = false;
             }
+        }
+
+        if (Time.realtimeSinceStartup - timePrincipioDeTurno > 1f){
+            transform.GetChild(1).gameObject.SetActive(false);
         }
     }
 
@@ -91,7 +109,7 @@ public class Mano : MonoBehaviour
     public void UsarCarta(int numCarta)
     {
         // Si la carta no se está creando
-        if (!creating[numCarta])
+        if (!cartasEnMano[numCarta].GetComponent<Carta>().creating && !principioDeTurno)
         {
             // Provocar el efecto de la carta
             cartasEnMano[numCarta].GetComponent<Carta>().LlamarEfecto();
@@ -114,5 +132,20 @@ public class Mano : MonoBehaviour
 
     public void TerminarTurno(){
         principioDeTurno = true;
+        timePrincipioDeTurno = Time.realtimeSinceStartup;
+    }
+
+    // True si el raton esta sobre la mano
+    public bool MouseSobreMano(){
+        Ray ray;
+        RaycastHit hit;
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(Physics.Raycast(ray, out hit))
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

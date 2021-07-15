@@ -16,17 +16,22 @@ public class Carta : EventTrigger
 
     private float limite; // Limite de la pantalla a partir del cual se activa la carta
 
+    public bool creating; // Indica si la carta se está creando
+    
+
     // Start is called before the first frame update
     void Start()
     {
         dragging = false;
+        creating = true;
         RectTransform rt = (RectTransform) transform;
         altura = rt.rect.height;
 
         mano = GameObject.FindGameObjectWithTag("Mano");
 
         rt = (RectTransform) mano.transform;
-        limite = mano.transform.position.y+rt.rect.height/2;
+        limite = rt.rect.height/2;
+
     }
 
     // Update is called once per frame
@@ -38,7 +43,7 @@ public class Carta : EventTrigger
         }
 
         // Si se suelta en el tablero, llamar al método UsarCarta()
-        if (!dragging && transform.position.y > limite){
+        if (!creating && !dragging && transform.localPosition.y>limite){
             mano.GetComponent<Mano>().UsarCarta(posicionEnMano);
         }
         
