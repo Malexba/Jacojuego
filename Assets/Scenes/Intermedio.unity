@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 203894144}
   - component: {fileID: 203894143}
   - component: {fileID: 203894142}
+  - component: {fileID: 203894145}
   m_Layer: 5
   m_Name: Avanza
   m_TagString: Untagged
@@ -613,6 +614,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 203894145}
+        m_TargetAssemblyTypeName: musicota, Assembly-CSharp
+        m_MethodName: cambioPista
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &203894143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,6 +664,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203894140}
   m_CullTransparentMesh: 1
+--- !u!114 &203894145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203894140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e745190b35e8a445a7a393c3fee16c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  g: {fileID: 0}
+  clip:
+  - {fileID: 8300000, guid: 6df7565c6775e204dbad7a502e7f1626, type: 3}
+  - {fileID: 8300000, guid: 8a46db844c0271a479907f6d5e7d80ea, type: 3}
 --- !u!1 &286747604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,7 +2022,6 @@ MonoBehaviour:
   img: {fileID: 495102576}
   texto: {fileID: 770707253}
   jugador: {fileID: 11400000, guid: dba25a7392112bb43bb0acca7c08786b, type: 2}
-  inicio: 1
 --- !u!1 &1611428116
 GameObject:
   m_ObjectHideFlags: 0
