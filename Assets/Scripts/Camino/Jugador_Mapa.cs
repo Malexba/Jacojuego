@@ -42,9 +42,12 @@ public class Jugador_Mapa : MonoBehaviour
         numMotivacion.text = motivacion.ToString();
     }
 
-    public void MoverACasilla(Transform casilla){
+    public void MoverACasilla(Transform casilla){ // Mover jugador a una casilla
+        // Mover la posición del jugador
         transform.position = casilla.position + new Vector3(0,sprite.bounds.size.y/2,0);
-
+        // Actualizar la casilla actual
+        casillaActual = casilla.gameObject;
+        // Desactivar el halo de todas las casillas del mapa 
         GameObject[] casillas = GameObject.FindGameObjectsWithTag("Casilla");
         foreach(GameObject cas in casillas){
             cas.transform.GetChild(1).gameObject.SetActive(false);

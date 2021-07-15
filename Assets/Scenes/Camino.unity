@@ -1759,8 +1759,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cartasEnMano: []
-  carta: {fileID: 6313132329949193152, guid: b29564d9dd6fc254ea332c4303eefffa, type: 3}
+  mazo: 
+  propiedadesJugador: {fileID: 11400000, guid: dba25a7392112bb43bb0acca7c08786b, type: 2}
+  cartas:
+  - {fileID: 6313132329949193152, guid: 1f462a6e5fca44a4d9363941f15471cb, type: 3}
+  - {fileID: 6313132329949193152, guid: 99be038574bdb7a4a8ed61997fcc2115, type: 3}
+  - {fileID: 6313132329949193152, guid: fb5e6c0bf4655334ab9a694e6e239fca, type: 3}
+  - {fileID: 6313132329949193152, guid: 8d761293b825092429553a7f7760686b, type: 3}
+  - {fileID: 6313132329949193152, guid: 2b047a8d15755be4a84771e3d46604aa, type: 3}
   movementSpeed: 1.5
+  jugador: {fileID: 455394463}
 --- !u!114 &778401126
 MonoBehaviour:
   m_ObjectHideFlags: 0

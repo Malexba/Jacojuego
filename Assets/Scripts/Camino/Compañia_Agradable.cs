@@ -12,7 +12,7 @@ public class Compañia_Agradable : MonoBehaviour
         List<GameObject> casillasPosibles = new List<GameObject>();
         List<GameObject> auxs = new List<GameObject>();
         // Encuentra las casillas a distancia de entre 2 y 3
-        for(int i =2;i < 3; i++){
+        for(int i =2;i < 4; i++){
             auxs = casillaActual.GetComponent<Casilla_Mapa>().GetCasillasADistancia(i);
             foreach(GameObject aux in auxs){
                 casillasPosibles.Add(aux);

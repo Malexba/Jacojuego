@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Motivacionextra : MonoBehaviour
+public class Motivacion_Extra : MonoBehaviour
 {
     // +2 de motivacion
     public void ProvocarEfecto(){
