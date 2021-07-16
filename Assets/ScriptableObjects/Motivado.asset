@@ -15,11 +15,11 @@ MonoBehaviour:
   nombre: "Sof\xEDa de Holanda"
   nombre2: "Sof\xEDa de Holanda"
   tipo: 1
-  energia: 25
+  energia: 30
   motivacion: 12
   tamInv: 4
-  img: {fileID: 0}
-  img2: {fileID: 0}
+  img: {fileID: 21300000, guid: e1cf10a960f044d448368702dd13db24, type: 3}
+  img2: {fileID: 21300000, guid: e1cf10a960f044d448368702dd13db24, type: 3}
   info: "Condesa holandesa del siglo XII y peregrina, es la primera devota flamenca
     de la que se tiene noticia. Hac\xEDa descalza media legua cada d\xEDa, lo cual
     da fe de su motivaci\xF3n."

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2131869131131219281}
   - component: {fileID: 1204101068339955062}
   - component: {fileID: 1162077555186299385}
+  - component: {fileID: 455324640250441371}
   m_Layer: 0
   m_Name: Casilla Normal
   m_TagString: Casilla
@@ -117,6 +118,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &455324640250441371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211497134965271309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e00de65c5180f478ff8991bd431a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3999824804577803591
 GameObject:
   m_ObjectHideFlags: 0

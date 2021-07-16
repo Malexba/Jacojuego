@@ -19,6 +19,10 @@ public class Compañia_Agradable : MonoBehaviour
             }
         }
 
+        
+        if (casillasPosibles.Count==0){
+            casillasPosibles = casillaActual.GetComponent<Casilla_Mapa>().GetCasillasADistancia(1);
+        }
         // Activa el halo de todas ellas
         foreach (GameObject casilla in casillasPosibles){
             casilla.transform.GetChild(1).gameObject.SetActive(true);

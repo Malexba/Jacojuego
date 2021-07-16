@@ -13,11 +13,17 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
     public GameObject abajo;
     public GameObject[] carta;
     public Image astro;
+    public Image fondo;
+    public GameObject suelo;
+    public Image[] interactuable;
     public Sprite[] astros;
+    public Sprite[] fondos;
     public Text nombre;
+    public Text boton;
     public Image img;
     public Text texto;
     public Jugador jugador;
+    public Character[] personajes;
     bool mochi;
     private int posLista = 0; // Posición en la lista del mazo (mod 3)
 
@@ -25,10 +31,30 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
     {
         if (jugador.inicio)
         {
+            boton.text = "Comencemos";
+            fondo.sprite = fondos[0];
             astro.sprite = astros[0];
+            interactuable[3].sprite = personajes[3].img;
+            interactuable[4].sprite = personajes[4].img;
         } else
         {
+            suelo.SetActive(true);
+            boton.text = "A dormir";
+            fondo.sprite = fondos[1];
             astro.sprite = astros[1];
+            interactuable[3].sprite = personajes[3].img2;
+            interactuable[4].sprite = personajes[4].img2;
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            interactuable[i].sprite = personajes[i].img;
+        }
+    }
+
+    void Update(){
+        if (Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
         }
     }
 
@@ -112,7 +138,7 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
             if (j < i)
             {
                 carta[j].SetActive(true);
-                carta[j].GetComponent<Image>().sprite = jugador.spriteCarta(3*posLista+j);
+                carta[j].GetComponent<Image>().sprite = jugador.spriteCarta(jugador.mazo[3*posLista+j]);
             } else
                 carta[j].SetActive(false);
         }
@@ -132,6 +158,8 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
         {
             jugador.inicio = false;
             SceneManager.LoadScene("Camino");
+        } else {
+            SceneManager.LoadScene("Inicio");
         }
     }
 }

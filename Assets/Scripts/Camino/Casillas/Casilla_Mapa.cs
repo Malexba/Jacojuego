@@ -9,7 +9,7 @@ public class Casilla_Mapa : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.GetChild(1).gameObject.SetActive(false);
+        DesactivarHalo();
     }
 
     // Update is called once per frame
@@ -51,5 +51,11 @@ public class Casilla_Mapa : MonoBehaviour
 
     public void DesactivarHalo(){
         transform.GetChild(1).gameObject.SetActive(false);
+    }
+
+    public void Efecto(){
+        if(name!="Casilla Inicial"){
+            BroadcastMessage("ProvocarEfecto");
+        }
     }
 }

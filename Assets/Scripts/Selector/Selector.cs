@@ -21,6 +21,13 @@ public class Selector : MonoBehaviour
 
     }
 
+    void Update(){
+        if (Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
+        }
+    }
+
     void asignarPersonaje()
     {
         nombre.text = personaje[personajeActual].nombre;
