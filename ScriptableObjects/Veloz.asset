@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
+  m_Name: Veloz
+  m_EditorClassIdentifier: 
+  nombre: Gotescalco
+  nombre2: Gotescalco
+  tipo: 2
+  energia: 35
+  motivacion: 10
+  tamInv: 4
+  img: {fileID: 21300000, guid: 5d4ff0c4a018eef4582300174897691d, type: 3}
+  img2: {fileID: 21300000, guid: 5d4ff0c4a018eef4582300174897691d, type: 3}
+  info: "Obispo de Santa Mar\xEDa de An\xEDs, en Aquitania, Francia. Se dice que
+    fue el primer peregrino no hisp\xE1nico. La compa\xF1\xEDa de su s\xE9quito le
+    otorga mucha energ\xEDa."
+  dialogo: "Albelda es un lugar maravilloso, estoy deseando volver el a\xF1o que
+    viene para recoger el Libellus de virginitate. Es un c\xF3dice de San Ildenfonso
+    de Toledo que trata sobre la virgen Mar\xEDa. Si alguna vez pasas por Aquitania
+    no dudes en hacerme una visita y podr\xE1s leerlo, ya sabes que puedes considerar
+    Santa Mar\xEDa de An\xEDs como tu segundo hogar."
+  dialogo2: "\xBFHas disfrutado de la actuaci\xF3n de mis juglares? La verdad es
+    que junto a mi comitiva este viaje est\xE1 siendo una experiencia maravillosa.
+    Los trovadores amenizan las noches y ayudan a olvidar el cansancio del d\xEDa;
+    mientras que me reconforta poder ofrecer protecci\xF3n a otros peregrinos gracias
+    a la ayuda de mis lanceros."

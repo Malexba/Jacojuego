@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b144c1ba1862c8e4d9ddf359f322bbc4, type: 3}
+  m_Name: Experto
+  m_EditorClassIdentifier: 
+  nombre: Aymeric Picaud
+  nombre2: Aymeric Picaud
+  tipo: 0
+  energia: 27
+  motivacion: 9
+  tamInv: 5
+  img: {fileID: 21300000, guid: 6e30eba577b556b409018f76c8e6aa33, type: 3}
+  img2: {fileID: 21300000, guid: 6e30eba577b556b409018f76c8e6aa33, type: 3}
+  info: "Cl\xE9rigo y peregrino franc\xE9s del siglo XII, al cual se le atribuye
+    la primera gu\xEDa para los peregrinos, recogida en el C\xF3dice Calixtino. Su
+    experiencia resulta muy valiosa."
+  dialogo: "Desde N\xE1jera aqu\xED la verdad es que hay un buen trecho, si no se
+    hace a caballo esta etapa puede resultar demasiado ardua... \xA1Anda, pero si
+    est\xE1s ah\xED! Perdona, no te hab\xEDa visto, estaba redactando un manuscrito
+    con indicaciones sobre la ruta. A veces me quedo tan ensimismado mientras escribo
+    que olvido el mundo que me rodea."
+  dialogo2: "\xBFQuieres ver un boceto del monasterio que hemos visto al pasar? Si
+    te soy sincero, me he entretenido tanto admir\xE1ndolo que se me ha hecho demasiado
+    tarde y voy a tener que pasar la noche aqu\xED. Normalmente cuando realizo esta
+    etapa suelo llegar hasta Fr\xF3mista, pero creo firmemente que el hecho de disfrutar
+    de la experiencia es lo m\xE1s importante."
