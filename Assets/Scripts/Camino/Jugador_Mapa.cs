@@ -52,6 +52,8 @@ public class Jugador_Mapa : MonoBehaviour
         foreach(GameObject cas in casillas){
             cas.transform.GetChild(1).gameObject.SetActive(false);
         }
+        // Llamar al efecto de la nueva casilla
+        casilla.gameObject.GetComponent<Casilla_Mapa>().Efecto();
     }
 
     public void SetEnergiaMaxima(int i){

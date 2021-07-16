@@ -17,6 +17,8 @@ public class Main_Camera : MonoBehaviour
 
     private bool cartaEnArrastre; // Indican si las cartas en mano se están arrastrando
 
+    private bool camaraBloqueada = false; // Indica si la cámara está bloqueada por un popup
+
 private Vector3 originalPosition; // Posición original de la cámara al empexzar a arrastrar
 
     // Start is called before the first frame update
@@ -62,25 +64,26 @@ private Vector3 originalPosition; // Posición original de la cámara al empexza
             cartaEnArrastre = cartaEnArrastre | cartasEnMano[i].GetComponent<Carta>().dragging;
             
         }
+        if (!camaraBloqueada){
+            // Al iniciar el arrastre
+            if (Input.GetMouseButtonDown(0) && !cartaEnArrastre)
+            {
+                originalPosition = transform.position;
+                dragOrigin = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                dragging = true;
+                timeDragging = Time.realtimeSinceStartup;
+            }
 
-        // Al iniciar el arrastre
-        if (Input.GetMouseButtonDown(0) && !cartaEnArrastre)
-        {
-            originalPosition = transform.position;
-            dragOrigin = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            dragging = true;
-            timeDragging = Time.realtimeSinceStartup;
-        }
-
-        // Al finalizar el arrastre, espera un segundo para poner dragging en false
-        if ((!Input.GetMouseButton(0) || cartaEnArrastre) && (Time.realtimeSinceStartup - timeDragging) > 1f){
-            dragging = false;
-        }
- 
-        // Durante el arrastre, cambia la posición de la cámara
-        if (Input.GetMouseButton(0) && !cartaEnArrastre){
-            Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition) - dragOrigin;
-            transform.position = new Vector3(Mathf.Clamp(originalPosition.x -pos.x * dragSpeed, tLX, bRX), Mathf.Clamp(originalPosition.y -pos.y * dragSpeed, tLY, bRY), transform.position.z);
+            // Al finalizar el arrastre, espera un segundo para poner dragging en false
+            if ((!Input.GetMouseButton(0) || cartaEnArrastre) && (Time.realtimeSinceStartup - timeDragging) > 1f){
+                dragging = false;
+            }
+    
+            // Durante el arrastre, cambia la posición de la cámara
+            if (Input.GetMouseButton(0) && !cartaEnArrastre ){
+                Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition) - dragOrigin;
+                transform.position = new Vector3(Mathf.Clamp(originalPosition.x -pos.x * dragSpeed, tLX, bRX), Mathf.Clamp(originalPosition.y -pos.y * dragSpeed, tLY, bRY), transform.position.z);
+            }
         }
     }
 
@@ -94,5 +97,13 @@ private Vector3 originalPosition; // Posición original de la cámara al empexza
         tLY = map.transform.position.y - rend.bounds.size.y/2 + halfCameraHeight;
         bRX = map.transform.position.x + rend.bounds.size.x/2 - halfCameraWidth;
         bRY = map.transform.position.y + rend.bounds.size.y/2 - halfCameraHeight;
+    }
+
+    public void BloquearArrastreCámara(){
+        camaraBloqueada = true;
+    }
+
+    public void DesbloquearArrastreCámara(){
+        camaraBloqueada = false;
     }
 }

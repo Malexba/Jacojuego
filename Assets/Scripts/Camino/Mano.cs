@@ -21,8 +21,10 @@ public class Mano : MonoBehaviour
     private bool principioDeTurno; // Indica si es el principio de turno
 
     private float timePrincipioDeTurno; // Timestamp desde principio de turno
+    public List<Sprite> spriteCarta;
 
     public GameObject jugador; // Jugador
+    public GameObject mochilaAbierta; // GameObject del amochila abierta
 
 
     // Start is called before the first frame update
@@ -32,7 +34,7 @@ public class Mano : MonoBehaviour
         timeCreating = new float[maxNumCartas];
         arrastrables = true;
         principioDeTurno = true;
-        transform.GetChild(1).gameObject.SetActive(false);
+        mochilaAbierta.SetActive(false);
         foreach(int num in propiedadesJugador.mazo){
             mazo.Add(num);
         }
@@ -51,7 +53,7 @@ public class Mano : MonoBehaviour
                 mazo.Add(tipoCartasMano[i]); // Poner la carta de vuelta en el mazo
                 tipoCartasMano.RemoveAt(i);
             }
-            transform.GetChild(1).gameObject.SetActive(true);
+            mochilaAbierta.SetActive(true);
             for (int i =0; i<maxNumCartas;i++){
                 RobarCarta();
             }
@@ -75,7 +77,7 @@ public class Mano : MonoBehaviour
         }
 
         if (Time.realtimeSinceStartup - timePrincipioDeTurno > 1f){
-            transform.GetChild(1).gameObject.SetActive(false);
+            mochilaAbierta.SetActive(false);
         }
     }
 
@@ -94,6 +96,7 @@ public class Mano : MonoBehaviour
         GameObject nuevaCarta = Instantiate(cartas[mazo[index]], new Vector3(-350, 54, 0), transform.rotation);
         mazo.RemoveAt(index); // Quitar carta del mazo porque está en la mano
         nuevaCarta.transform.SetParent(transform, false);
+        nuevaCarta.transform.SetSiblingIndex(cartasEnMano.Count);
         nuevaCarta.name = "Carta_" + cartasEnMano.Count.ToString();
         nuevaCarta.GetComponent<Carta>().posicionEnMano = cartasEnMano.Count;
         cartasEnMano.Add(nuevaCarta);
@@ -144,6 +147,22 @@ public class Mano : MonoBehaviour
         }
     }
 
+    public void DestruirCarta(int numCarta) // Destruye una carta de la mano sin provocar su efecto
+    {    
+        // Destruir la instancia de la carta
+        Destroy(cartasEnMano[numCarta]);
+        cartasEnMano.RemoveAt(numCarta);
+        mazo.Add(tipoCartasMano[numCarta]); // Poner la carta de vuelta en el mazo
+        tipoCartasMano.RemoveAt(numCarta);
+
+        // Reorganizar la mano
+        for (int i = numCarta; i < cartasEnMano.Count; i++)
+        {
+            cartasEnMano[i].name = "Carta_" + i.ToString();
+            cartasEnMano[i].GetComponent<Carta>().posicionEnMano = i;
+        }
+    }
+
     public bool GetArrastrables(){
         return arrastrables;
     }
@@ -166,5 +185,24 @@ public class Mano : MonoBehaviour
         else{
             return false;
         }
+    }
+
+    public void RobarCartaEspecifica(int tipoCarta)
+    {
+        creating[cartasEnMano.Count] = true;
+        timeCreating[cartasEnMano.Count] = Time.realtimeSinceStartup;
+        tipoCartasMano.Add(tipoCarta); // Añadir el tipo de la carta
+        GameObject nuevaCarta = Instantiate(cartas[tipoCarta], new Vector3(-350, 54, 0), transform.rotation);
+        // Quitar carta del mazo porque está en la mano
+        if (mazo.Contains(tipoCarta)){
+            mazo.Remove(tipoCarta);
+        }
+        nuevaCarta.transform.SetParent(transform, false);
+        nuevaCarta.transform.SetSiblingIndex(cartasEnMano.Count);
+        nuevaCarta.name = "Carta_" + cartasEnMano.Count.ToString();
+        nuevaCarta.GetComponent<Carta>().posicionEnMano = cartasEnMano.Count;
+        cartasEnMano.Add(nuevaCarta);
+
+        ReorganizarMano();
     }
 }
