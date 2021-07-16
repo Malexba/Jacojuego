@@ -18,8 +18,8 @@ MonoBehaviour:
   energia: 27
   motivacion: 9
   tamInv: 5
-  img: {fileID: 0}
-  img2: {fileID: 0}
+  img: {fileID: 21300000, guid: 6e30eba577b556b409018f76c8e6aa33, type: 3}
+  img2: {fileID: 21300000, guid: 6e30eba577b556b409018f76c8e6aa33, type: 3}
   info: "Cl\xE9rigo y peregrino franc\xE9s del siglo XII, al cual se le atribuye
     la primera gu\xEDa para los peregrinos, recogida en el C\xF3dice Calixtino. Su
     experiencia resulta muy valiosa."

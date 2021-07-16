@@ -14,6 +14,7 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
     public GameObject[] carta;
     public Image astro;
     public Image fondo;
+    public GameObject suelo;
     public Image[] interactuable;
     public Sprite[] astros;
     public Sprite[] fondos;
@@ -37,6 +38,7 @@ public class Mochila : MonoBehaviour // En verdad esto es el gestor de toda la e
             interactuable[4].sprite = personajes[4].img;
         } else
         {
+            suelo.SetActive(true);
             boton.text = "A dormir";
             fondo.sprite = fondos[1];
             astro.sprite = astros[1];

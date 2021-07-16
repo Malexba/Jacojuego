@@ -18,8 +18,8 @@ MonoBehaviour:
   energia: 10
   motivacion: 7
   tamInv: 4
-  img: {fileID: 0}
-  img2: {fileID: 0}
+  img: {fileID: 21300000, guid: 7b3ecf617fad755449932d6244d5a700, type: 3}
+  img2: {fileID: 21300000, guid: 2dbbcbf22b112954cb99d756f1e671db, type: 3}
   info: "Un simp\xE1tico abad"
   dialogo: "Espero que disfrutes de una agradable jornada. En caso de flaqueza recuerda
     mantener siempre la fe y si lo necesitas puedes orar a la catedral para aumentar
